@@ -1,5 +1,3 @@
-# monsupersite
-
 ##### config-python---django---projet
 
 ## requirements.txt
