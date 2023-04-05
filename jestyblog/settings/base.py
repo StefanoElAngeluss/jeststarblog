@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'blog',
 ]
 
 MIDDLEWARE = [
@@ -41,7 +42,7 @@ ROOT_URLCONF = 'jestyblog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -103,8 +104,28 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+# STATIC_URL_1 = 'static/'
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# images + avatar
+# MEDIA_URL = '/medias/'
+# MEDIA_ROOT = BASE_DIR / 'medias'
+
+# MEDIA_URL_1 = '/membres/default/'
+# MEDIA_ROOT_1 = BASE_DIR / 'membres/default'
+
+# assets JS + CSS
+# STATICFILES_DIRS = [
+#     BASE_DIR, 'static',
+# ]
+STATICFILES_DIRS = [
+    BASE_DIR, "static",
+]
+# redirection
+# LOGIN_REDIRECT_URL = 'accueil'
+# LOGOUT_REDIRECT_URL = 'accueil'
