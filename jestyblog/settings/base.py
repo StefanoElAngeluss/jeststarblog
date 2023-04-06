@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django_htmx',
     'blog',
 ]
 
@@ -35,6 +36,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'django_htmx.middleware.HtmxMiddleware',
 ]
 
 ROOT_URLCONF = 'jestyblog.urls'
@@ -112,11 +114,11 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# images + avatar
-# MEDIA_URL = '/medias/'
-# MEDIA_ROOT = BASE_DIR / 'medias'
+# images & avatar & public
+MEDIA_URL = '/public/images/'
+MEDIA_ROOT = BASE_DIR / 'public'
 
-# MEDIA_URL_1 = '/membres/default/'
+# MEDIA_URL_1 = '/membres/'
 # MEDIA_ROOT_1 = BASE_DIR / 'membres/default'
 
 # assets JS + CSS

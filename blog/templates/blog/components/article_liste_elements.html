@@ -1,0 +1,26 @@
+{% for article in articles %}
+<a href="" class="text-decoration-none">
+  {%if forloop.last %}
+    <div class="card border-0 pb-3 pb-sm-5 me-5 p-4 mb-3"
+        style="background-color:#1ed7d7;"
+        hx-get="{% url 'accueil' %}?page={{ page_obj.number|add:1 }}",
+        hx-trigger="revealed" hx-swap="afterend">
+  {% else %}
+    <div class="card border-0 pb-3 pb-sm-5 me-5 p-4 mb-3" style="background-color:#1ed7d7;">
+  {% endif %}
+      <div class="row">
+        <div class="col-8">
+          <div class="card-body p-0">
+            <div class="pb-2 text-body infscroll-auteur">{{ article.auteur }}</div>
+            <h1 class="mb-1 text-body fw-bold infscroll-titre">{{ article.titre|truncatechars:80 }}</h1>
+            <h2 class="text-muted fs-6 d-none d-md-block">{{ article.sous_titre }}</h2>
+            <div class="text-muted infscroll-date">{{ article.updated_at|date:'d M Y' }}</div>
+          </div>
+        </div>
+        <div class="col-4">
+          <img src="https://picsum.photos/seed/picsum/205/115" class="img-fluid float-end" alt="Image">
+        </div>
+      </div>
+    </div>
+  </a>
+{% endfor %}

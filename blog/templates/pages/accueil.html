@@ -1,0 +1,20 @@
+{% extends '../base/base.html' %}
+
+{% block title %}Accueil Page{% endblock %}
+
+{% block template %}
+{% include '../base/navbar.html' %}
+{% include '../blog/components/splash.html' %}
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-12 col-lg-8">
+
+      {% include '../blog/components/article_liste_elements.html' %}
+
+    </div>
+    <div class="d-none d-lg-block col-4">b</div>
+  </div>
+</div>
+
+{% endblock %}
