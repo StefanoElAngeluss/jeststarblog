@@ -1,0 +1,31 @@
+{% extends '../base/base.html' %}
+
+{% block title %}Accueil Page{% endblock %}
+
+{% block template %}
+{% include '../base/navbar.html' %}
+{% include '../blog/components/splash.html' %}
+
+<div class="container-fluid">
+  <div class="row mt-5 mb-5" style="margin-left: 20px;">
+
+      <div class="col-12 col-md-6">
+        {% include '../blog/components/article_liste_elements.html' %}
+      </div>
+
+      <div class="col-12 col-lg-3 g-0">
+        <div class="tags">
+          {% sidebar_tag_cloud %}
+        </div>
+      </div>
+
+      <div class="d-none d-lg-block col-12 col-lg-3">
+        <div class="text-center">
+        <h4>Réseaux Sociaux</h4>
+        <a href="">Facebook</a>
+      </div>
+
+  </div>
+</div>
+
+{% endblock %}

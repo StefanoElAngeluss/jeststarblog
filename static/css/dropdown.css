@@ -1,0 +1,25 @@
+/* Dropdown */
+.dropdown-menu {
+	background-color: #254752 !important;
+}
+.dropdown-menu a:hover {
+	background-color: #309992 !important;
+}
+.dropdown-menu a:active {
+	color: var(--bs-dropdown-link-active-color) !important;
+	text-decoration: none !important;
+	background-color: var(--bs-dropdown-link-active-bg) !important;
+}
+
+/* Bouton Dropdown */
+.container {
+	margin: 20px;
+}
+.dropdown-toggle:after {
+	display: none !important;
+}
+.fa {
+	padding: 2px;
+	margin: 4px;
+	color: white;
+}

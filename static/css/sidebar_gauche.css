@@ -1,0 +1,35 @@
+/* SIDEBAR GAUCHE */
+#sm-logo-out {
+	position: relative;
+	background-color: #102127;
+	width: 38px;
+	height: 38px;
+	top: 50%;
+}
+#sm-logo-in {
+	position: relative;
+	background-color: #c7f0f0;
+	width: 12px;
+	height: 12px;
+	top: 18%;
+	left: 50%;
+}
+.stickyNote {
+	margin-left: -20px !important;
+}
+@media only screen and (max-width: 576px) {
+	.container,
+	.container-sm {
+		max-width: 100% !important;
+	}
+}
+@media only screen and (min-width: 768) {
+	.gauche-navbar {
+		flex: 0 0 80px;
+		display: flex;
+		justify-content: center;
+		border-right: 1px solid #c7f0f0;
+		height: 100vh;
+	}
+}
+

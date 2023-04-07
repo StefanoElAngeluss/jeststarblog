@@ -1,0 +1,8 @@
+.relatedTitre {
+  color: #203c46;
+}
+@media only screen and (max-width: 768px) {
+  .baseRelated {
+    margin-left:-20px !important;
+  }
+}

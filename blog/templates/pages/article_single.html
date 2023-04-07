@@ -1,0 +1,27 @@
+{% extends '../base/3_col_template.html' %}
+
+{% block contenu_gauche %}
+  {% include '../base/gauche_navbar.html' %}
+{% endblock %}
+
+{% block contenu_milieu %}
+
+  <div class="monBlog center mx-auto" style="max-width:683px;">
+
+    <h1 class="fw-bold pb-1">{{ article.titre }}</h1>
+    <div class="blogAuteur">
+      Créer par {{ article.auteur }}
+      <span class="blogDate mx-3">
+        le {{ article.updated_at|date:'d M' }}
+      </span>
+    </div>
+    <h2 class="blogSousTitre fs-4 pb-3">{{ article.sous_titre }}</h2>
+    <div class="blogContenu">{{ article.contenu | markdown | safe }}</div>
+
+  </div>
+
+{% endblock %}
+
+{% block contenu_droite %}
+  {% include 'blog/components/sticky_note.html' %}
+{% endblock %}

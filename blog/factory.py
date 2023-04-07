@@ -23,3 +23,26 @@ class ArticleFactory(factory.django.DjangoModelFactory):
     return x
 
   status = 'published'
+
+  @factory.post_generation
+  def tags(self, create, extracted, **kwargs):
+    if not create:
+      return
+
+    if extracted:
+      self.tags.add(extracted)
+    else:
+      self.tags.add(
+        "Back-End",
+        "Deployment",
+        "Développement",
+        "Django",
+        "Database",
+        "Front-End",
+        "Javascript",
+        "ORM",
+        "Pytest",
+        "Python",
+        "Ruby on Rails"
+        "VSCode",
+      )
