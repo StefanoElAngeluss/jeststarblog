@@ -1,5 +1,7 @@
 from django.contrib.auth.models import User
 from django.db import models
+from django.urls import reverse
+from taggit.managers import TaggableManager
 
 class Article(models.Model):
 
@@ -21,8 +23,13 @@ class Article(models.Model):
   updated_at = models.DateTimeField(auto_now=True)
   status = models.CharField(max_length=10, choices=options, default="draft")
 
+  tags = TaggableManager()
+
+  def get_absolute_url(self):
+    return reverse("article_single", args=[self.slug])
+
   class Meta:
-    ordering = ("-created_at",)
+    ordering = ("created_at",)
 
   def __str__(self):
     return self.titre

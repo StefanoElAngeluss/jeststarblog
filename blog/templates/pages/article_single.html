@@ -1,0 +1,17 @@
+{% extends '../base/3_col_template.html' %}
+
+{% block contenu_gauche %}
+Gauche
+{% endblock %}
+
+{% block contenu_milieu %}
+  <div>{{ article.auteur }}</div>
+  <div>{{ article.updated_at|date:'d M' }}</div>
+  <h1>{{ article.titre }}</h1>
+  <h2>{{ article.sous_titre }}</h2>
+  {{ article.contenu }}
+{% endblock %}
+
+{% block contenu_droite %}
+Droite
+{% endblock %}

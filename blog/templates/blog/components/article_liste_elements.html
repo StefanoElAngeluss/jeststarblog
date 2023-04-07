@@ -1,5 +1,5 @@
 {% for article in articles %}
-<a href="" class="text-decoration-none">
+<a href="{{ article.get_absolute_url }}" class="text-decoration-none">
   {%if forloop.last %}
     <div class="card border-0 pb-3 pb-sm-5 me-5 p-4 mb-3"
         style="background-color:#1ed7d7;"
