@@ -1,0 +1,28 @@
+<div class="col-12 baseRelated">
+  <div class="mt-5">
+    <div class="pb-4">
+
+      <h4 class="pb-3 fw-bold fs-14 text-uppercase">
+        Voir plus de {{article.auteur}}
+      </h4>
+
+      {% for article in related %}
+      <a href="{{article.get_absolute_url}}" class="text-decoration-none">
+        <div class="card mb-3 border-0 ps-1">
+          <div class="row">
+            <div class="col-9 pe-2">
+              <span class="relatedTitre small">{{article.auteur}}</span>
+              <h1 class="mb-1 fs-6 p-0 relatedTitre">
+                {{article.titre|truncatechars:80}}
+              </h1>
+            </div>
+            <div class="col-3">
+              <img src="https://picsum.photos/seed/picsum/205/115" class="img-fluid float-end" alt="Image">
+            </div>
+          </div>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>

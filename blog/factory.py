@@ -33,14 +33,16 @@ class ArticleFactory(factory.django.DjangoModelFactory):
       self.tags.add(extracted)
     else:
       self.tags.add(
-        "Python",
+        "Back-End",
+        "Deployment",
+        "Développement",
         "Django",
         "Database",
-        "Pytest",
-        "Javascript",
-        "VSCode",
-        "Deployment",
-        "ORM",
         "Front-End",
-        "Back-End",
+        "Javascript",
+        "ORM",
+        "Pytest",
+        "Python",
+        "Ruby on Rails"
+        "VSCode",
       )

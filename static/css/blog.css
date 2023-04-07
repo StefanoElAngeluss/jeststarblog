@@ -1,0 +1,32 @@
+/* Blog */
+.monBlog {
+	letter-spacing: -0.6px;
+}
+.blogAuteur {
+	text-transform: capitalize;
+	color: #b6baff;
+}
+.blogDate {
+	color: #00c600;
+}
+.blogContenu h1 {
+	font-size: 26px !important;
+	font-weight: bold;
+}
+.blogContenu p {
+	color: #f5e7ec !important;
+	font-size: 1.0625rem;
+	font-family: "Barlow", sans-serif;
+	line-height: 32px;
+	letter-spacing: 0.4px;
+	/* font-family: monospace; */
+	/* Proza Libre, Merriweather, Barlow */
+}
+@media only screen and (max-width: 768px) {
+	.blogContenu p {
+		margin-right: 40px;
+	}
+}
+.blogSousTitre {
+	color: #eb8a52;
+}

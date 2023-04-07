@@ -18,6 +18,12 @@
 
 		{% comment %} STATIC CSS & JS {% endcomment %}
 		<link rel="stylesheet" href="{% static 'css/base.css' %}" />
+		<link rel="stylesheet" type="text/css" href="{% static 'css/blog.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/sticky.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/dropdown.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/sidebar_gauche.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/footer_tag_cloud.css' %}">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/related_article.css' %}">
 	</head>
 	<body>
 
@@ -29,10 +35,15 @@
 		{% comment %} JQUERY {% endcomment %}
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js" integrity="sha512-pumBsjNRGGqkPzKHndZMaAG+bir374sORyzM3uulLV14lN5LyykqNk8eEeUlUkB3U0M4FApyaHraT65ihJhDpQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+		{% comment %} FULL CALENDAR {% endcomment %}
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js'></script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/locale/fr.js'></script>
+
 		{% comment %} HTMX.JS {% endcomment %}
 		<script src="{% static 'js/htmx.min.js' %}" defer></script>
 
 		{% comment %} SCRIPTS BASE {% endcomment %}
 		<script src="{% static 'js/base.js' %}"></script>
+		<script src="{% static 'js/sticky.js' %}"></script>
 	</body>
 </html>
